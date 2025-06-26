@@ -1,8 +1,8 @@
-# Fairfax-Real-Estate-Project
+# Fairfax-Real-Estate-Project (This is the name
 
 ##Project Objective
 
-##The goal of my project is to focus on the comparison of 2010 to 2015 sales data to their 2025 assessed property values. My analysis determines:
+The goal of my project is to focus on the comparison of 2010 to 2015 sales data to their 2025 assessed property values. My analysis determines:
 --
 --
 --
@@ -18,7 +18,7 @@
 ---
 
 ##Technology
--- SQL(PostGRE) - Writing queries and analysing the data
+-- SQL(PostGRE) - Data cleaning, writing queries, and analysis
 -- PowerBI - Dashboards and data vizualizations
 -- GitHub - Project sharing
 
