@@ -11,14 +11,22 @@
 
 ##Dataset
 --Source: 
+
+
 *Note* The data was cleaned and processed using PostgreSQL before visualization.
 
---
+---
 
 ##Technology
 -- SQL(PostGRE) - Writing queries and analysing the data
 -- PowerBI - Dashboards and data vizualizations
 -- GitHub - Project sharing
 
+---
+
 ##Findings
+-- 
+--
+--
+--
 (just mention some of the results)
