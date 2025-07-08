@@ -25,7 +25,7 @@ The goal of my project is focused on the comparison of 2010 to 2015 property sal
 
 ##Technology
 -- *SQL(PostGRE)* - Data cleaning, joins,  writing queries, and analysis  (FLAG)
--- *PowerBI* - Dashboards, data vizualizations, trends,
+-- *Tableau* - Dashboards, data vizualizations, trends,
 -- *GitHub* - Project sharing
 -- *Excel* - Preliminary Cleaning
 
