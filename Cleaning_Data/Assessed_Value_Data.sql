@@ -1,4 +1,4 @@
--- Dropping prior assessed colomns. 
+-- Dropping prior assessed colomns.  
 ALTER TABLE assessed_values
 DROP COLUMN priland,
 DROP COLUMN pribldg,
