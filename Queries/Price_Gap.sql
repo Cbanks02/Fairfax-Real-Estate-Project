@@ -13,6 +13,7 @@ AND ABS (price - aprtot) < '750000'
 GROUP BY EXTRACT (YEAR FROM saledt)
 ORDER BY avg_price_gap ASC;
 
+
 --Trend Query for biggest price gaps.
 
 SELECT
@@ -29,6 +30,7 @@ AND ABS (price - aprtot) < '750000'
 GROUP BY EXTRACT (YEAR FROM saledt), Round((price - aprtot),0), price,
 aprtot, code_desc
 ORDER BY price_gap ASC;
+
 
 -- What properties are more likely to sell further below or above their 2025 assessed values?
 -- I used a CTE improve the readability of my SQL query.
