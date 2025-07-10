@@ -14,6 +14,7 @@ GROUP BY EXTRACT (YEAR FROM saledt)
 ORDER BY avg_price_gap ASC;
 
 --Trend Query for biggest price gaps.
+
 SELECT
 EXTRACT (YEAR FROM saledt) AS sale_year,
 price,
@@ -28,6 +29,34 @@ AND ABS (price - aprtot) < '750000'
 GROUP BY EXTRACT (YEAR FROM saledt), Round((price - aprtot),0), price,
 aprtot, code_desc
 ORDER BY price_gap ASC;
+
+-- What properties are more likely to sell further below or above their 2025 assessed values?
+-- I used a CTE improve the readability of my SQL query.
+-- Propety sizes are categorized by total square footage.
+
+SELECT
+property_size_category,
+COUNT(*) AS total_properties,
+SUM (CASE WHEN price > aprtot THEN 1 ELSE 0 END) AS sold_above,
+SUM (CASE WHEN price < aprtot THEN 1 ELSE 0 END) AS sold_below,
+ROUND(100.0 * SUM(CASE WHEN price > aprtot THEN 1 ELSE 0 END) / COUNT(*), 1) AS percent_above,
+ROUND(100.0 * SUM(CASE WHEN price < aprtot THEN 1 ELSE 0 END) / COUNT(*), 1) AS percent_below
+FROM ( 
+SELECT*,
+CASE
+	WHEN (sf + (acres * 43560)) >= 100000 THEN 'large'
+	WHEN (sf + (acres * 43560)) >= 50000 THEN 'medium'
+		ELSE 'small'
+			END AS property_size_category
+FROM land_data
+JOIN assessed_values ON land_data.parid = assessed_values.parid
+JOIN sales_data ON land_data.parid = sales_data.parid
+WHERE saledt BETWEEN '2010-01-01' AND '2015-12-31'
+AND ABS (price - aprtot) < '750000')
+GROUP BY property_size_category;
+
+
+
 
 
 
