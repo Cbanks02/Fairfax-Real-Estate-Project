@@ -1,4 +1,4 @@
-# Fairfax-Real-Estate-Project (This is the name
+# Fairfax-Real-Estate-Project
 
 Overview
 
