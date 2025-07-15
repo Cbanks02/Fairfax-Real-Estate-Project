@@ -15,11 +15,9 @@ The goal of my project is focused on the comparison of 2010 to 2015 property sal
 
 ##Dataset
 --Source: I recieved my datasets from https://data.virginia.gov/
--- Raw data:[Uploading Assessed_Values.csv…]()
-            [Uploading  Tax_Administration_s_Real_Estate_-_Assessed_Values.csv…]()
 
+-- Raw Data: The datasets I worked with consisted of three large CSV files containing 2025 assessed property values, land information, and property sales data for Fairfax County, Virginia. Each dataset included a common key called parcel IDs which allowed me to accurately join the data across the files. Altogether, the combined datasets contained over one million rows of information, featuring numerous null, missing, and outlier values. The data was cleaned and processed using PostgreSQL before visualization. I applied comprehensive data cleaning and preprocessing techniques to address these issues, followed by exploratory data analysis and complex querying to extract valuable insights.
 
-*Note* The data was cleaned and processed using PostgreSQL before visualization.
 
 ---
 
