@@ -4,8 +4,8 @@ SELECT
 EXTRACT(YEAR FROM saledt) AS Sale_year,
 ROUND(AVG((aprtot - price )/price) * 100.0, 1) AS avg_appreciation_percent,
 CASE
-	WHEN (sf + (acres * 43560)) >= 100000 THEN 'large'
-	WHEN (sf + (acres * 43560)) >= 50000 THEN 'medium'
+	WHEN (sf + (acres * 43560)) >= 10000 THEN 'large'
+	WHEN (sf + (acres * 43560)) >= 5000 THEN 'medium'
 		ELSE 'small'
 END AS property_size_category
 FROM land_data
@@ -21,8 +21,8 @@ ORDER BY property_size_category DESC;
 
 SELECT
 CASE
-	WHEN (sf + (acres * 43560)) >= 100000 THEN 'large'
-	WHEN (sf + (acres * 43560)) >= 50000 THEN 'medium'
+	WHEN (sf + (acres * 43560)) >= 10000 THEN 'large'
+	WHEN (sf + (acres * 43560)) >= 5000 THEN 'medium'
 		ELSE 'small'
 END AS property_size_category,
 ROUND(AVG((aprtot - price )/price) * 100.0, 1) AS appreciation_percent
