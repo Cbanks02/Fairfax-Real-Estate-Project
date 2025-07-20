@@ -45,8 +45,8 @@ ROUND(100.0 * SUM(CASE WHEN price < aprtot THEN 1 ELSE 0 END) / COUNT(*), 1) AS 
 FROM ( 
 SELECT*,
 CASE
-	WHEN (sf + (acres * 43560)) >= 100000 THEN 'large'
-	WHEN (sf + (acres * 43560)) >= 50000 THEN 'medium'
+	WHEN (sf + (acres * 43560)) >= 10000 THEN 'large'
+	WHEN (sf + (acres * 43560)) >= 5000 THEN 'medium'
 		ELSE 'small'
 			END AS property_size_category
 FROM land_data
