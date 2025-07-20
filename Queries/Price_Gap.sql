@@ -1,6 +1,5 @@
 -- which year has the biggest price gaps?
--- Due to minimal sample size, non valid sales, or missing data, 
--- the sales between years between 2016 - 2025 were not inlcuded in calculations
+-- Due to minimal sample size, non valid sales, or missing data, the sales between years between 2016 - 2025 were not inlcuded in calculations
 
 SELECT
 EXTRACT (YEAR FROM saledt) AS sale_year,
