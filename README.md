@@ -6,7 +6,7 @@
 
 The goal of my project is focused on the comparison of 2010 to 2015 property sales data to their 2025 assessed values. My analysis answers the following questions:
 
--- What year did each property size category have the highest annual appreciation compared to their 2025 assessed value?
+-- What year did each property size category have the highest annual appreciation compared to their 2025 assessed value by year?
 -- What property size category appreciated the most overall?
 -- which year has the biggest price gaps?
 -- What properties are more likely to sell further below or above their 2025 assessed values?
