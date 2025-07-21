@@ -4,7 +4,8 @@
 ##Project Objective
 -
 
-The goal of my project is focused on the comparison of 2010 to 2015 property sales data to their 2025 assessed values. My analysis answers the following questions:
+The goal of my project is to compare 2010 to 2015 single-family home sales data with their 2025 assessed values.
+My analysis answers the following questions:
 
 -- What year did each property size category have the highest annual appreciation compared to their 2025 assessed value by year?
 -- What property size category appreciated the most overall?
@@ -23,17 +24,19 @@ The goal of my project is focused on the comparison of 2010 to 2015 property sal
 ##Technology 
 -
 
--- *SQL(PostGRE)* - Data cleaning, joins, CTEs, case, writing queries, and analysis
+-- *SQL(PostGRE)* - Data cleaning, filtering, joins, CTEs, case, writing queries, and analysis
 -- *Tableau* - Dashboards, data vizualizations, trends,
 -- *GitHub* - Project sharing
 -- *Excel* - Preliminary Cleaning
 
 ##Findings
+-
 
--- Small properties experienced the highest peak appreciation. Annual appreciation was highest on average in the small property category. Property sizes were defined using total square footage, including both the home and the land.Property size categories were defined by total square footage: small is less than 5,000 sq ft, medium is 5,000–9,999 sq ft, and large is 10,000 - 50,000 sq ft or more.
+-- Small properties experienced the highest peak appreciation. Annual appreciation was highest on average in the small property category. Property sizes were defined using total square footage, including both the home and the land. Property size categories were defined by total square footage: small is less than 5,000 sq ft, medium is 5,000–9,999 sq ft, and large is 10,000 - 40,000 sq ft or more.
 
---
-(just mention some of the results)
+--	The largest average price gap occurred in 2010. The difference between the 2025 assessed value and actual sale price was highest in 2010 across all property sizes. The average price gap decreased over time, with 2015 showing the smallest gap.
+
+-- Large properties were most likely to sell below their assessed value. When comparing assessed values to actual sales, large single-family homes on average had the biggest percentage below their 2025 assessed values, followed by small properties. Medium-sized homes had the smallest percentage, which indicates a closer alignment with 2025 assessed value.
 
 
 ## About Me
