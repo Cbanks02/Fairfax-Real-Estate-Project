@@ -29,9 +29,9 @@ The goal of my project is focused on the comparison of 2010 to 2015 property sal
 -- *Excel* - Preliminary Cleaning
 
 ##Findings
--- 
---
---
+
+-- Small properties experienced the highest peak appreciation. Annual appreciation was highest on average in the small property category. Property sizes were defined using total square footage, including both the home and the land.Property size categories were defined by total square footage: small is less than 5,000 sq ft, medium is 5,000–9,999 sq ft, and large is 10,000 - 50,000 sq ft or more.
+
 --
 (just mention some of the results)
 
