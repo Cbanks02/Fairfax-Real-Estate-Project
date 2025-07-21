@@ -1,5 +1,6 @@
 -- I added additional filters to all queries to exclude potential outliers that could skew the data, including price gaps exceeding $750,000 or below -$750,000, 
--- Due to minimal sample size, non valid sales, or missing data, the sales between years between 2016 - 2025 were not inlcuded in calculations
+-- and total property (land and building) square footage exceeding 40,000. Due to minimal sample size, non valid sales, or missing data,
+-- the sales between years between 2016 - 2025 were not inlcuded in calculations
 
 -- which year has the biggest price gaps?
 
