@@ -1,3 +1,6 @@
+-- I added additional filters to both queries to exclude potential outliers that could skew the data, including price gaps exceeding $750,000 or below -$750,000, 
+-- and total property (land and building) square footage exceeding 40,000.
+
 -- What year did each property size category have the highest annual appreciation compared to their 2025 assessed value?
 
 SELECT
