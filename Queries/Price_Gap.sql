@@ -11,6 +11,7 @@ FROM sales_data
 JOIN assessed_values ON sales_data.parid = assessed_values.parid
 JOIN land_data ON sales_data.parid = land_data.parid
 WHERE saledt BETWEEN '2010-01-01' AND '2015-12-31'
+AND (sf + (acres * 43560)) < 40000
 AND ABS (price - aprtot) < '750000'
 GROUP BY EXTRACT (YEAR FROM saledt)
 ORDER BY avg_price_gap ASC;
@@ -28,6 +29,7 @@ FROM sales_data
 JOIN assessed_values ON sales_data.parid = assessed_values.parid
 JOIN land_data ON sales_data.parid = land_data.parid
 WHERE saledt BETWEEN '2010-01-01' AND '2015-12-31'
+AND (sf + (acres * 43560)) < 40000
 AND ABS (price - aprtot) < '750000'
 GROUP BY EXTRACT (YEAR FROM saledt), Round((price - aprtot),0), price,
 aprtot, code_desc
