@@ -18,7 +18,7 @@ My analysis answers the following questions:
 -
 -- Source: I recieved my datasets from https://data.virginia.gov/
 
--- Raw Data: The datasets I worked with consisted of three large CSV files containing 2025 assessed property values, land information, and property sales data for Fairfax County, Virginia. Each dataset included a common key called parcel IDs which allowed me to accurately join the data across the files. Altogether, the combined datasets contained over one million rows of information, featuring numerous null, missing, and outlier values. The data was cleaned and processed using PostgreSQL before visualization. I applied comprehensive data cleaning and preprocessing techniques to address these issues, followed by exploratory data analysis and complex querying to extract valuable insights.
+-- Raw Data: The datasets I worked with consisted of three large CSV files containing 2025 assessed property values, land information, and property sales data for Fairfax County, Virginia. Each dataset included a common key called parcel IDs which allowed me to accurately join the data across the files. Altogether, the combined datasets contained over one million rows of raw information, featuring numerous null, missing, and outlier values that initially ranged further back than 1990. The data was cleaned and processed using PostgreSQL before visualization. I applied comprehensive data cleaning and preprocessing techniques to address these issues, followed by exploratory data analysis and complex querying to extract valuable insights.
 
 
 ##Technology 
