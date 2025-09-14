@@ -3,7 +3,7 @@
 -- the sales between years between 2016 - 2025 were not inlcuded in calculations
 
 ---------------------------------------------------------------------------------
--- Joining sales, land, and assessed values into one dataset
+-- Joining sales, land, and assessed value tables into one dataset
 
 CREATE TABLE fairfax_property_data AS
 SELECT 
@@ -22,16 +22,13 @@ SELECT
 EXTRACT(YEAR FROM saledt) AS Sale_year,
 ROUND(AVG((aprtot - price )/price) * 100.0, 1) AS avg_appreciation_percent,
 CASE
-	WHEN (sf + (acres * 43560)) >= 10000 THEN 'large'
+	WHEN (sf + (acres * 43560)) >= 15000 THEN 'large'
 	WHEN (sf + (acres * 43560)) >= 5000 THEN 'medium'
 		ELSE 'small'
 END AS property_size_category
-FROM land_data
-JOIN sales_data ON land_data.parid = sales_data.parid
-JOIN assessed_values ON land_data.parid = assessed_values.parid
+FROM fairfax_property_data
 Where saledt between '2010-01-01' AND '2015-12-31'
-AND (sf + (acres * 43660)) <= 40000
-AND ABS (price - aprtot) < '750000'
+AND ABS (price - aprtot) < 300000
 GROUP BY sale_year, property_size_category
 ORDER BY property_size_category DESC;
 
@@ -40,17 +37,14 @@ ORDER BY property_size_category DESC;
 
 SELECT
 CASE
-	WHEN (sf + (acres * 43560)) >= 10000 THEN 'large'
+	WHEN (sf + (acres * 43560)) >= 15000 THEN 'large'
 	WHEN (sf + (acres * 43560)) >= 5000 THEN 'medium'
 		ELSE 'small'
 END AS property_size_category,
-ROUND(AVG((aprtot - price )/price) * 100.0, 1) AS appreciation_percent
-FROM land_data
-JOIN sales_data ON land_data.parid = sales_data.parid
-JOIN assessed_values ON land_data.parid = assessed_values.parid
+ROUND(AVG((aprtot - price )/price) * 100.0, 2) AS appreciation_percent
+FROM fairfax_property_data
 WHERE saledt BETWEEN '2010-01-01' AND '2015-12-31'
-AND (sf + (acres * 43660)) <= 40000
-AND ABS (price - aprtot) < '750000'
+AND ABS (price - aprtot) < 300000
 GROUP BY property_size_category
 ORDER BY appreciation_percent;
 
