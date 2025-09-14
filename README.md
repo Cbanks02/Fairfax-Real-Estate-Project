@@ -4,27 +4,28 @@
 ##Project Objective
 -
 
-The goal of my project is to compare 2010 to 2015 single-family home sales data with their 2025 assessed values.
-My analysis answers the following questions:
+In this project I compare 2010 to 2015 single-family home sales data with their 2025 assessed values.
+My analysis covers the following questions:
 
 -- What year did each property size category have the highest annual appreciation compared to their 2025 assessed value by year?
 -- What property size category appreciated the most overall?
 -- which year has the biggest price gaps?
--- What properties are more likely to sell further below or above their 2025 assessed values?
+-- What properties sold furthest below their 2025 assessed values?
 
 
 
 ##Dataset
 -
--- Source: I recieved my datasets from https://data.virginia.gov/
+Source: I recieved my datasets from https://data.virginia.gov/
 
--- Raw Data: The datasets I worked with consisted of three large CSV files containing 2025 assessed property values, land information, and property sales data for Fairfax County, Virginia. Each dataset included a common key called parcel IDs which allowed me to accurately join the data across the files. Altogether, the combined datasets contained over one million rows of raw information, featuring numerous null, missing, and outlier values that initially ranged further back than 1990. The data was cleaned and processed using PostgreSQL before visualization. I applied comprehensive data cleaning and preprocessing techniques to address these issues, followed by exploratory data analysis and complex querying to extract valuable insights.
+Raw Data: I worked with three large CSV files containing 2025 assessed property values, land information, and property sales data for Fairfax County, Virginia. Together, these files held over one million rows of raw records, with missing values, outliers, and historical entries extending back before 1990. Using PostgreSQL, I cleaned, standardized, and joined the data by matching parcel IDs into a unified fairfax_property_data table, ensuring accuracy across sources. Once the data was prepared, I performed exploratory analysis and ran queries to reveal meaningful patterns and insights.
+
 
 
 ##Technology 
 -
 
--- *SQL(PostGRE)* - Data cleaning, filtering, joins, CTEs, case, writing queries, and analysis
+-- *SQL(PostGRE)* - Data cleaning, filtering, joins, case, writing queries, and analysis
 -- *Tableau* - Dashboards, data vizualizations, trends,
 -- *GitHub* - Project sharing
 -- *Excel* - Preliminary Cleaning
