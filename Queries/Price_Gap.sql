@@ -3,7 +3,7 @@
 -- the sales between years between 2016 - 2025 were not inlcuded in calculations
 
 ---------------------------------------------------------------------------------
--- Joining sales, land, and assessed values into one dataset
+-- Joining sales, land, and assessed value tables into one dataset
 
 CREATE TABLE fairfax_property_data AS
 SELECT 
