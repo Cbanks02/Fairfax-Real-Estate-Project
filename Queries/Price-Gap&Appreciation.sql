@@ -14,7 +14,6 @@ sales_data.saleval_desc, land_data.code_desc, assessed_values.description
 FROM sales_data
 JOIN land_data ON sales_data.parid = land_data.parid
 JOIN assessed_values ON sales_data.parid = assessed_values.parid;
----------------------------------------------------------------------------------
 
 
 -- which year has the biggest price gaps?
